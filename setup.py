@@ -4,7 +4,7 @@ setup(
     name="facial_emotion_detection_system",
     version="0.1.0",
     author="Bappy",
-    author_email="entbappy73@gmail.com",
+    author_email="lakshmiraju96543@gmail.com",
     packages= find_packages(),
     install_requires=[]
 )
