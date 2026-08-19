@@ -60,7 +60,10 @@ def run_detection(cv_image: np.ndarray):
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(
+        request=request,
+        name="index.html"
+    )
 
 
 
@@ -104,7 +107,7 @@ async def detect_webcam(payload: WebcamPayload):
 if __name__ == "__main__":
     import uvicorn
 
-    host = "0.0.0.0"
+    host = "127.0.0.1"
     port = 8000
     print(f"Starting Facial Emotion Detection app on http://{host}:{port}")
     uvicorn.run("app:app", host=host, port=port, reload=True)
